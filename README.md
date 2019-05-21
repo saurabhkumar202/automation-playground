@@ -41,3 +41,7 @@ docker-compose scale chrome=5
 ## Spin more firefox containers
 
 docker-compose scale chrome=5
+
+## After spinning containers run the E2E tests using protractor service
+
+ docker-compose run protractor
