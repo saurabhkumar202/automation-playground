@@ -20,7 +20,7 @@ services:
           - HUB_HOST=selenium-hub
           - HUB_PORT=4444
         ports:
-            - "32765:5900"
+            - "5900"
   firefox:
         image: selenium/node-firefox-debug:3.11.0-dysprosium
         volumes:
@@ -31,7 +31,7 @@ services:
           - HUB_HOST=selenium-hub
           - HUB_PORT=4444
         ports:
-            - "32766:5900"
+            - "5900"
   protractor:
       build: ./tests
       depends_on:

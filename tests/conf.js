@@ -33,13 +33,13 @@ exports.config = {
      multiCapabilities: [{
        'browserName': 'chrome',
        shardTestFiles: true,
-       maxInstances: 2,
+     //  maxInstances: 2,
        specs: ['tests/regression.spec.js','tests/sanity.spec.js'] // Capacity specific specs
      }
      , {
          'browserName': 'firefox',
          shardTestFiles: true,
-         maxInstances: 2,
+       //  maxInstances: 2,
          specs: ['tests/regression.spec.js','tests/sanity.spec.js'] // Capacity specific specs
      }
      ]
