@@ -34,3 +34,10 @@ docker-compose up
 
 docker-compose down --rmi all
 
+## Spin more chrome containers
+
+docker-compose scale chrome=5
+
+## Spin more firefox containers
+
+docker-compose scale chrome=5
