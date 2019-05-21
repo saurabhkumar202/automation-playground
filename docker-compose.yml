@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  webapp:
+    build: .
+    ports:
+     - "8080:80"
+  selenium-hub:
+        image: selenium/hub:3.11.0-dysprosium
+        container_name: selenium-hub
+        ports:
+          - "4444:4444"
+  chrome:
+        image: selenium/node-chrome-debug:3.11.0-dysprosium
+        volumes:
+           - /dev/shm:/dev/shm
+        depends_on:
+          - selenium-hub
+        environment:
+          - HUB_HOST=selenium-hub
+          - HUB_PORT=4444
+        ports:
+            - "32765:5900"
+  firefox:
+        image: selenium/node-firefox-debug:3.11.0-dysprosium
+        volumes:
+         - /dev/shm:/dev/shm
+        depends_on:
+          - selenium-hub
+        environment:
+          - HUB_HOST=selenium-hub
+          - HUB_PORT=4444
+        ports:
+            - "32766:5900"
+  protractor:
+      build: ./tests
+      depends_on:
+            - selenium-hub
+            - chrome
+            - firefox
+      command: ["node_modules/protractor/bin/protractor","conf.js"]
+      ports:
+      - "8050:8090"
+  start_dependencies:
+      image: dadarek/wait-for-dependencies
+      depends_on:
+            - webapp
+            - selenium-hub
+            - chrome
+            - firefox
+      command: webapp:80 selenium-hub:4444 chrome:5900 firefox:5900
+
+

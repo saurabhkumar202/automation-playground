@@ -1,0 +1,18 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "Routing intro projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "6"
+  ],
+  "author": "Saurabh",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "^5.3.2"
+  }
+}

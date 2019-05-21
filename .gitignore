@@ -1,46 +1,179 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+browsermob-proxy-*/
+browsermob-proxy-*
+allure-results/
+node/*
+bower_components/
+.sass-cache/
+.tmp/
+*.xml
 
-# compiled output
-/dist
-/tmp
-/out-tsc
-# Only exists if Bazel was run
-/bazel-out
+target/
+src/app/i18n
+src/translations
+coverage/
 
-# dependencies
-/node_modules
+# The following sections are based on standard gitignore templates# {{{
 
-# profiling files
-chrome-profiler-events.json
-speed-measure-plugin.json
+# Node .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Node.gitignore
+################################################################
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
 
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+#localization GNU gettext MO files
+po/*.mo
 
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+pids
+logs
+results
 
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
 npm-debug.log
-yarn-error.log
-testem.log
-/typings
+node_modules/
+# }}}
 
-# System Files
-.DS_Store
+# Windows .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
+##########################################################################
+# Windows image file caches
 Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+# }}}
+
+# Eclipse .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
+##########################################################################
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+# }}}
+
+# Netbeans .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Global/NetBeans.gitignore
+###########################################################################
+nbproject/private/
+build/
+nbbuild/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+# }}}
+
+# IntelliJ .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Global/IntelliJ.gitignore
+###########################################################################
+*.iml
+*.ipr
+*.iws
+.idea/
+# }}}
+
+# Vim .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Global/vim.gitignore
+#######################################################################
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+# }}}
+
+# Emacs .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Global/Emacs.gitignore
+########################################################################
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+# }}}
+
+# Textmate .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Global/TextMate.gitignore
+###########################################################################
+*.tmproj
+*.tmproject
+tmtags
+# }}}
+
+# SublimeText .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Global/SublimeText.gitignore
+###############################################################################
+# SublimeText project files
+*.sublime-workspace
+# }}}
+
+# Tags .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Global/Tags.gitignore
+#######################################################################
+# Ignore tags created by etags and ctags
+TAGS
+!TAGS/
+tags
+!tags/
+# }}}
+
+# SASS .gitignore template# {{{
+# https://github.com/github/gitignore/blob/master/Global/SASS.gitignore
+#######################################################################
+### SASS Ignores - "Sassy CSS" http://sass-lang.com/
+*.sass-cache
+# }}}
+
+#packing-only formats
+*.iso
+*.tar
+
+#package management formats
+*.dmg
+*.xpi
+*.gem
+*.egg
+*.deb
+*.rpm
+# }}}
+# }}}
+
+# End of file .gitconfig and vim modeline {{{
+# vim:fen:fdm=marker:fmr={{{,}}}:fdl=0:fdc=1:et:ts=2:sw=2:sts=2
+/target-ide/
